@@ -11,6 +11,11 @@ import (
 // i5 := 500
 var i5 int = 500
 
+func outer() {
+	var s4 string = "outer"
+	fmt.Println(s4)
+}
+
 func main() {
 	// HelloWorld
 	fmt.Println("Hello, World!!")
@@ -56,4 +61,13 @@ func main() {
 	// fmt.Println(i4)
 
 	fmt.Println(i5)
+
+	// 関数の呼び出し
+	outer()
+
+	// main関数で定義していない変数のため呼び出すことができない
+	// fmt.Println(s4)
+
+	var s5 string = "Not Use"
+	fmt.Println(s5)
 }
